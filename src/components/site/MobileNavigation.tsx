@@ -32,7 +32,6 @@ export function MobileNavigation() {
         onClick={() => setOpen((v) => !v)}
         className="inline-flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--color-fg-primary)]"
       >
-        <span className="sr-only">Menu</span>
         <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
           {open ? (
             <path d="M4 4l14 14M18 4L4 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
