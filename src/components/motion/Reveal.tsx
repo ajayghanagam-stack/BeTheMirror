@@ -12,16 +12,17 @@ type Props = {
 
 export function Reveal({ as: Tag = "div", delayMs = 0, className, children }: Props) {
   const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(() =>
-    typeof window !== "undefined"
-      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      : false
-  );
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (visible) return;
     const node = ref.current;
     if (!node) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setVisible(true);
+      return;
+    }
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
@@ -36,7 +37,7 @@ export function Reveal({ as: Tag = "div", delayMs = 0, className, children }: Pr
     );
     io.observe(node);
     return () => io.disconnect();
-  }, [visible]);
+  }, []);
 
   return (
     <Tag
