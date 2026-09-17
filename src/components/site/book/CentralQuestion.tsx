@@ -5,14 +5,13 @@ import { Reveal } from "@/components/motion/Reveal";
 export function CentralQuestion() {
   return (
     <Section
-      aria-labelledby="central-question-title"
+      aria-label="Central question"
       className="border-t border-[color:var(--color-border-subtle)]"
     >
       <Container>
         <div className="mx-auto max-w-3xl py-10 md:py-16">
           <Reveal>
             <p
-              id="central-question-title"
               className="font-semibold leading-[1.15] tracking-[-0.015em] text-[color:var(--color-fg-primary)]"
               style={{ fontSize: "var(--text-h1)" }}
             >
