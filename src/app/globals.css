@@ -84,3 +84,47 @@
     }
   }
 }
+
+/* Editorial prose block for /ideas/[slug] article body.
+   Applies spacing + type to unadorned <p>/<h2>/<h3>/<ul>/<ol>/<blockquote>. */
+.idea-prose {
+  color: var(--color-fg-primary);
+  font-size: var(--text-body-lg);
+  line-height: var(--text-body-lg--line-height);
+}
+.idea-prose > * + * {
+  margin-top: 1.5em;
+}
+.idea-prose h2 {
+  margin-top: 2.5em;
+  font-size: var(--text-h2);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--color-fg-primary);
+}
+.idea-prose h3 {
+  margin-top: 2em;
+  font-size: var(--text-h3);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-fg-primary);
+}
+.idea-prose p {
+  color: var(--color-fg-primary);
+}
+.idea-prose ul,
+.idea-prose ol {
+  padding-left: 1.5em;
+  color: var(--color-fg-primary);
+}
+.idea-prose ul { list-style: disc; }
+.idea-prose ol { list-style: decimal; }
+.idea-prose li + li { margin-top: 0.5em; }
+.idea-prose strong { color: var(--color-fg-primary); font-weight: 600; }
+.idea-prose em { font-style: italic; }
+.idea-prose a {
+  color: var(--color-accent-cyan);
+  border-bottom: 1px solid var(--color-accent-cyan-soft);
+}
+.idea-prose a:hover { border-bottom-color: var(--color-accent-cyan); }
