@@ -42,6 +42,7 @@ export function Reveal({ as: Tag = "div", delayMs = 0, className, children }: Pr
   return (
     <Tag
       ref={ref as never}
+      inert={!visible || undefined}
       className={cn("reveal", visible && "is-visible", className)}
       style={delayMs ? { transitionDelay: `${delayMs}ms` } : undefined}
     >

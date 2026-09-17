@@ -31,7 +31,7 @@ export function FinalCTA() {
               the role each of us plays in making change possible.
             </p>
 
-            <div id="ideas" className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Button href="#buy" variant="primary">Buy the Book</Button>
               <Button href="#ideas" variant="secondary">Explore the Ideas</Button>
             </div>

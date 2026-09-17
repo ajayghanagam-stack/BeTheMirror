@@ -7,6 +7,7 @@ import { Reveal } from "@/components/motion/Reveal";
 export function MirrorMoments() {
   return (
     <Section
+      id="ideas"
       aria-labelledby="moments-title"
       className="border-t border-[color:var(--color-border-subtle)] bg-[color:var(--color-bg-primary)]"
     >
