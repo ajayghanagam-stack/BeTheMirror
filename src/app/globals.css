@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors — derived from the book cover artwork */
+  --color-bg-primary: #05080b;
+  --color-bg-secondary: #0b1116;
+  --color-fg-primary: #f4f6f8;
+  --color-fg-secondary: #a6b2bc;
+  --color-fg-muted: #7a8691;
+  --color-accent-cyan: #3ec7ff;
+  --color-accent-cyan-soft: rgba(62, 199, 255, 0.18);
+  --color-accent-yellow: #f5c94d;
+  --color-accent-yellow-soft: rgba(245, 201, 77, 0.16);
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Type scale */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --text-display: clamp(3.25rem, 6vw + 1rem, 6.5rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.02em;
+  --text-h1: clamp(2.25rem, 3.5vw + 1rem, 3.5rem);
+  --text-h1--line-height: 1.05;
+  --text-h2: clamp(1.75rem, 2vw + 1rem, 2.25rem);
+  --text-h2--line-height: 1.15;
+  --text-h3: 1.25rem;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.65;
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-nav: 0.9375rem;
+  --text-button: 0.9375rem;
+
+  /* Layout */
+  --container-site: 1200px;
+  --spacing-gutter: 1.5rem;      /* mobile horizontal padding */
+  --spacing-gutter-md: 2rem;
+  --spacing-gutter-lg: 3rem;
+  --spacing-section: clamp(4rem, 8vw, 7rem);
+
+  /* Breakpoints (Tailwind defaults are fine; document them here for reference)
+     sm 40rem / md 48rem / lg 64rem / xl 80rem */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html { color-scheme: dark; }
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-fg-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  :focus-visible {
+    outline: 2px solid var(--color-accent-cyan);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background: var(--color-accent-yellow-soft);
+    color: var(--color-fg-primary);
+  }
 }
