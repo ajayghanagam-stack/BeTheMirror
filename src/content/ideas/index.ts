@@ -1,4 +1,10 @@
 import type { ComponentType } from "react";
+import * as whyPeopleResist from "./why-people-resist-change";
+import * as techVsOrgs from "./technology-can-change-faster-than-organizations";
+import * as aiAdoption from "./ai-adoption-is-an-organizational-change-problem";
+import * as intentVsExperience from "./transformation-intent-vs-experience";
+import * as changeAgents from "./change-agents-dont-need-to-control-everything";
+import * as mirrorFramework from "./before-another-framework-look-in-the-mirror";
 
 export type IdeaCategory =
   | "Leadership"
@@ -46,8 +52,14 @@ export type IdeaMeta = {
 
 export type IdeaModule = { meta: IdeaMeta; Body: ComponentType };
 
-// Task 3 replaces this stub with real imports.
-const modules: readonly { meta: IdeaMeta; default: ComponentType }[] = [];
+const modules: readonly { meta: IdeaMeta; default: ComponentType }[] = [
+  whyPeopleResist,
+  techVsOrgs,
+  aiAdoption,
+  intentVsExperience,
+  changeAgents,
+  mirrorFramework,
+];
 
 export const IDEAS: readonly IdeaModule[] = modules
   .filter((m) => m.meta.status === "published")
