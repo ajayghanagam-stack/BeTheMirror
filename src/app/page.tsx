@@ -1,4 +1,5 @@
 import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
 import { OpeningProvocation } from "@/components/site/sections/OpeningProvocation";
 import { WhyTransformationsStruggle } from "@/components/site/sections/WhyTransformationsStruggle";
@@ -26,6 +27,7 @@ export default function HomePage() {
         <AuthorsPreview />
         <FinalCTA />
       </main>
+      <Footer />
     </>
   );
 }
