@@ -4,6 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { Navigation } from "./Navigation";
 import { MobileNavigation } from "./MobileNavigation";
 import { Button } from "@/components/ui/Button";
+import { PURCHASE_URL } from "@/config/site";
 
 export function Header() {
   return (
@@ -19,7 +20,7 @@ export function Header() {
         <div className="flex items-center gap-8">
           <Navigation />
           <div className="hidden lg:block">
-            <Button href="#buy" variant="primary">
+            <Button href={PURCHASE_URL} variant="primary">
               Buy the Book
             </Button>
           </div>

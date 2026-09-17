@@ -3,6 +3,7 @@ import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
 import { HeroBackground } from "./HeroBackground";
 import { BookVisual } from "./BookVisual";
+import { PURCHASE_URL } from "@/config/site";
 
 export function Hero() {
   return (
@@ -48,7 +49,7 @@ export function Hero() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button href="#buy" variant="primary">Buy the Book</Button>
+              <Button href={PURCHASE_URL} variant="primary">Buy the Book</Button>
               <Button href="#ideas" variant="secondary">Explore the Ideas</Button>
             </div>
           </div>

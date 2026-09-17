@@ -45,7 +45,7 @@ export function AuthorsPreview() {
 
         <Reveal delayMs={200}>
           <div className="mt-12">
-            <Button href="#authors" variant="secondary">Meet the Authors</Button>
+            <Button href="/authors" variant="secondary">Meet the Authors</Button>
           </div>
         </Reveal>
       </Container>

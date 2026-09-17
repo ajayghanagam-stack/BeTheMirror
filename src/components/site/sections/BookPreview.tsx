@@ -4,6 +4,7 @@ import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
+import { PURCHASE_URL } from "@/config/site";
 
 export function BookPreview() {
   return (
@@ -64,8 +65,8 @@ export function BookPreview() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button href="#ideas" variant="secondary">Explore the Book</Button>
-              <Button href="#buy" variant="primary">Buy the Book</Button>
+              <Button href="/book" variant="secondary">Explore the Book</Button>
+              <Button href={PURCHASE_URL} variant="primary">Buy the Book</Button>
             </div>
           </Reveal>
         </div>
