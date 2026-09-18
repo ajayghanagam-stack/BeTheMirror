@@ -8,7 +8,7 @@ import { PURCHASE_URL } from "@/config/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-transparent bg-[color:var(--color-bg-primary)]/70 backdrop-blur supports-[backdrop-filter]:bg-[color:var(--color-bg-primary)]/55">
+    <header data-build-marker="btm-purchase-url-fix-v2" className="sticky top-0 z-40 border-b border-transparent bg-[color:var(--color-bg-primary)]/70 backdrop-blur supports-[backdrop-filter]:bg-[color:var(--color-bg-primary)]/55">
       <Container className="flex h-[72px] items-center justify-between">
         <Link
           href="/"
