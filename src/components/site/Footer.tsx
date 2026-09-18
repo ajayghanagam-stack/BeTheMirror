@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { Button } from "@/components/ui/Button";
 import { AUTHORS } from "@/content/authors";
 import { NAV_ITEMS } from "@/lib/nav";
-import { SITE_NAME, SITE_TAGLINE } from "@/config/site";
+import { SITE_NAME, SITE_TAGLINE, PURCHASE_URL } from "@/config/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -17,6 +18,12 @@ export function Footer() {
             <p className="mt-4 max-w-md text-[length:var(--text-body)] leading-[var(--text-body--line-height)] text-[color:var(--color-fg-secondary)]">
               {SITE_TAGLINE}
             </p>
+            <a
+              href="/speaking"
+              className="mt-4 inline-block text-[length:var(--text-small)] text-[color:var(--color-fg-muted)] hover:text-[color:var(--color-accent-cyan)] transition-colors"
+            >
+              Bring Be the Mirror to your organization
+            </a>
           </div>
 
           <nav aria-label="Footer">
@@ -60,22 +67,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-[color:var(--color-border-subtle)] pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="flex justify-center py-8 border-t border-[color:var(--color-border-subtle)]">
+          <Button href={PURCHASE_URL} variant="primary">Buy the Book</Button>
+        </div>
+
+        <div className="flex flex-col gap-4 border-t border-[color:var(--color-border-subtle)] pt-8 md:flex-row md:items-center md:justify-between">
           <p className="text-[length:var(--text-small)] text-[color:var(--color-fg-muted)]">
             &copy; {year} {SITE_NAME}. All rights reserved.
           </p>
-          <ul className="flex gap-6 text-[length:var(--text-small)]">
-            <li>
-              <span aria-disabled="true" className="cursor-not-allowed text-[color:var(--color-fg-muted)] opacity-70">
-                Privacy
-              </span>
-            </li>
-            <li>
-              <span aria-disabled="true" className="cursor-not-allowed text-[color:var(--color-fg-muted)] opacity-70">
-                Terms
-              </span>
-            </li>
-          </ul>
         </div>
       </Container>
     </footer>

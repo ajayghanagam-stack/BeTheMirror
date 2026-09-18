@@ -58,6 +58,14 @@ export function ResourceGrid() {
             ))}
           </div>
         )}
+        <Reveal delayMs={200}>
+          <a
+            href="/speaking"
+            className="mt-10 inline-block text-[length:var(--text-small)] text-[color:var(--color-accent-cyan)] hover:underline"
+          >
+            Need to explore these ideas with your team? &rarr; Explore workshops
+          </a>
+        </Reveal>
       </Container>
     </Section>
   );

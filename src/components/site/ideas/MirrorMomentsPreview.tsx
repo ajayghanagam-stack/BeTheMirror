@@ -30,6 +30,12 @@ export function MirrorMomentsPreview() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/#ideas" variant="secondary">View more Mirror Moments</Button>
           </div>
+          <a
+            href="/speaking"
+            className="mt-6 inline-block text-[length:var(--text-small)] text-[color:var(--color-accent-cyan)] hover:underline"
+          >
+            Take the conversation further &rarr; Speaking &amp; Workshops
+          </a>
         </Reveal>
       </Container>
     </Section>

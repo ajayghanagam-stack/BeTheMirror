@@ -36,6 +36,12 @@ export function FinalCTA() {
               <Button href={PURCHASE_URL} variant="primary">Buy the Book</Button>
               <Button href="#ideas" variant="secondary">Explore the Ideas</Button>
             </div>
+            <a
+              href="/speaking"
+              className="mt-6 inline-block text-[length:var(--text-small)] text-[color:var(--color-accent-cyan)] hover:underline"
+            >
+              Bring Be the Mirror to your organization &rarr;
+            </a>
           </Reveal>
 
           <Reveal className="order-1 lg:order-2" delayMs={120}>

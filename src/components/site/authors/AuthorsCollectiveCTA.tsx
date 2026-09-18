@@ -33,6 +33,12 @@ export function AuthorsCollectiveCTA() {
               <Button href="/book" variant="primary">Explore the Book</Button>
               <Button href="/ideas" variant="secondary">Explore the Ideas</Button>
             </div>
+            <a
+              href="/speaking"
+              className="mt-6 inline-block text-[length:var(--text-small)] text-[color:var(--color-accent-cyan)] hover:underline"
+            >
+              Invite the Authors &rarr;
+            </a>
           </Reveal>
         </div>
       </Container>

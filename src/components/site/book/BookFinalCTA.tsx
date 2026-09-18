@@ -35,6 +35,12 @@ export function BookFinalCTA() {
               <Button href={PURCHASE_URL} variant="primary">Buy the Book</Button>
               <Button href="/authors" variant="secondary">Meet the Authors</Button>
             </div>
+            <a
+              href="/speaking"
+              className="mt-6 inline-block text-[length:var(--text-small)] text-[color:var(--color-accent-cyan)] hover:underline"
+            >
+              Invite the Authors &rarr;
+            </a>
           </Reveal>
         </div>
       </Container>
