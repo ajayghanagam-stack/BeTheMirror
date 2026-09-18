@@ -33,6 +33,9 @@ export function FeaturedResource() {
             <p className="mt-8 max-w-2xl text-[length:var(--text-body-lg)] leading-[var(--text-body-lg--line-height)] text-[color:var(--color-fg-secondary)]">
               {featured.description}
             </p>
+            <p className="mt-6 text-[length:var(--text-small)] font-semibold uppercase tracking-[0.24em] text-[color:var(--color-fg-secondary)]">
+              {featured.title}
+            </p>
             <div className="mt-10">
               <span
                 aria-disabled={available ? undefined : "true"}
