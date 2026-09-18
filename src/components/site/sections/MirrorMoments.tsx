@@ -1,10 +1,13 @@
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { MirrorMoment } from "@/components/ui/MirrorMoment";
 import { Reveal } from "@/components/motion/Reveal";
+import { Button } from "@/components/ui/Button";
+import { MirrorMomentCard } from "@/components/ui/MirrorMomentCard";
+import { MIRROR_MOMENTS } from "@/content/mirror-moments";
 
 export function MirrorMoments() {
+  const featured = MIRROR_MOMENTS.filter((m) => m.featured).slice(0, 3);
   return (
     <Section
       id="ideas"
@@ -24,37 +27,18 @@ export function MirrorMoments() {
         </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <Reveal delayMs={0}>
-            <MirrorMoment index={1}>
-              &ldquo;We often ask why people resist change.
-              <br />
-              <br />
-              A better question may be:
-              <br />
-              <br />
-              <span className="text-[color:var(--color-accent-yellow)]">
-                What about the change made resistance rational?
-              </span>
-              &rdquo;
-            </MirrorMoment>
-          </Reveal>
-          <Reveal delayMs={120}>
-            <MirrorMoment index={2}>
-              &ldquo;Technology can change in months.
-              <br />
-              <br />
-              Organizations rarely do.&rdquo;
-            </MirrorMoment>
-          </Reveal>
-          <Reveal delayMs={240}>
-            <MirrorMoment index={3}>
-              &ldquo;Transformation isn&rsquo;t what leadership announces.
-              <br />
-              <br />
-              It&rsquo;s what people experience.&rdquo;
-            </MirrorMoment>
-          </Reveal>
+          {featured.map((moment, i) => (
+            <Reveal key={moment.id} delayMs={120 * i}>
+              <MirrorMomentCard moment={moment} index={i + 1} />
+            </Reveal>
+          ))}
         </div>
+
+        <Reveal delayMs={360}>
+          <div className="mt-12 flex flex-wrap gap-4">
+            <Button href="/ideas" variant="secondary">Explore more Ideas</Button>
+          </div>
+        </Reveal>
       </Container>
     </Section>
   );
