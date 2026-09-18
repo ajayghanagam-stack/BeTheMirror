@@ -1,3 +1,4 @@
+import type React from "react";
 import { cn } from "@/lib/cn";
 
 type SelectOption = { value: string; label: string };
@@ -11,6 +12,7 @@ type SelectFieldProps = {
   describedById?: string;
   invalid?: boolean;
   className?: string;
+  onChange?: React.ChangeEventHandler<HTMLSelectElement>;
 };
 
 export function SelectField({
@@ -22,6 +24,7 @@ export function SelectField({
   describedById,
   invalid,
   className,
+  onChange,
 }: SelectFieldProps) {
   return (
     <select
@@ -31,6 +34,7 @@ export function SelectField({
       required={required}
       aria-describedby={describedById}
       aria-invalid={invalid ? true : undefined}
+      onChange={onChange}
       className={cn(
         "w-full rounded-md border border-[color:var(--color-border-subtle)] bg-[color:var(--color-bg-secondary)]",
         "px-3 py-2 text-[length:var(--text-body)] text-[color:var(--color-fg-primary)]",
