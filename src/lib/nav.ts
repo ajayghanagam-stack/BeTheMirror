@@ -7,6 +7,6 @@ export const NAV_ITEMS: ReadonlyArray<NavItem> = [
   { label: "Ideas",     href: "/ideas",     live: true  },
   { label: "Authors",   href: "/authors",   live: true  },
   { label: "Resources", href: "/resources", live: true  },
-  { label: "Speaking",  href: "#speaking",  live: false },
-  { label: "Contact",   href: "#contact",   live: false },
+  { label: "Speaking",  href: "/speaking",  live: true  },
+  { label: "Contact",   href: "/contact",   live: true  },
 ];
