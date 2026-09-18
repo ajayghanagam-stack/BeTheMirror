@@ -12,6 +12,7 @@ import { BookJourney } from "@/components/site/book/BookJourney";
 import { FromTheBook } from "@/components/site/book/FromTheBook";
 import { BookEndorsements } from "@/components/site/book/BookEndorsements";
 import { BookFinalCTA } from "@/components/site/book/BookFinalCTA";
+import { ContinueExploringSection } from "@/components/site/book/ContinueExploringSection";
 
 export const metadata: Metadata = {
   title: "Be the Mirror | The Book",
@@ -36,6 +37,7 @@ export default function BookPage() {
         <FromTheBook />
         <BookEndorsements />
         <BookFinalCTA />
+        <ContinueExploringSection />
       </main>
       <Footer />
     </>

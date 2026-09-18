@@ -31,7 +31,7 @@ export function AuthorsCollectiveCTA() {
           <Reveal delayMs={120}>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button href="/book" variant="primary">Explore the Book</Button>
-              <Button href="/#ideas" variant="secondary">Explore the Ideas</Button>
+              <Button href="/ideas" variant="secondary">Explore the Ideas</Button>
             </div>
           </Reveal>
         </div>
