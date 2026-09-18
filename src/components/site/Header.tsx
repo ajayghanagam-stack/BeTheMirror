@@ -24,7 +24,7 @@ export function Header() {
               Buy the Book
             </Button>
           </div>
-          <MobileNavigation />
+          <MobileNavigation purchaseUrl={PURCHASE_URL} />
         </div>
       </Container>
     </header>

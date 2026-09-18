@@ -4,9 +4,8 @@ import { useEffect, useId, useRef, useState } from "react";
 import { NAV_ITEMS } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
-import { PURCHASE_URL } from "@/config/site";
 
-export function MobileNavigation() {
+export function MobileNavigation({ purchaseUrl }: { purchaseUrl: string }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const closeBtn = useRef<HTMLButtonElement>(null);
@@ -96,7 +95,7 @@ export function MobileNavigation() {
         </nav>
 
         <div className="px-6 pb-10">
-          <Button href={PURCHASE_URL} variant="primary" className="w-full" onClick={() => setOpen(false)}>
+          <Button href={purchaseUrl} variant="primary" className="w-full" onClick={() => setOpen(false)}>
             Buy the Book
           </Button>
         </div>
